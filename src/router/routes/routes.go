@@ -16,7 +16,8 @@ type Route struct {
 // Setup the routes inside of the router
 func Setup(router *mux.Router) *mux.Router {
 
-	routes := routesLogin
+	routes := routesUser
+	routes = append(routes, routesLogin...)
 
 	for _, route := range routes {
 
